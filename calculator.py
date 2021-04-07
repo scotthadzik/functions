@@ -16,8 +16,30 @@ def calculate(userNumber, conversionType):
         userAnswer = userNumber / 25.4
     return userAnswer
 
+def printResults(userConversionInput, userInput, calcValue):
+    if userConversionInput == '1':
+        #set first value to in and second value to mm
+        conversionUnit = 'in'
+        convertedUnit = 'mm'
+    if userConversionInput == '2':
+        #set first value to mm and second value to in
+        conversionUnit = 'mm'
+        convertedUnit = 'in'
+    print('The answer is: ', userInput, conversionUnit, '=', calcValue, convertedUnit)
+
 calcValue = calculate(userNumber, userConversionInput)
+printResults(userConversionInput,userInput, calcValue)
 
 
-# Print out the answer to user
-print('The answer is:', calcValue)
+# Print ex: The answer is 1 in = 25.4mm or 2 in = 50.8 mm
+
+
+
+
+
+
+
+
+
+
+
