@@ -9,18 +9,15 @@ userInput = input('What is the number: ')
 print('Your number is:', userInput) # TODO remove for production
 userNumber = float(userInput) 
 
-# Perform the conversion
-# Convert in to mm 25.4 mm in every 1 in
+def calculate(userNumber, conversionType):
+    if conversionType == '1':
+        userAnswer = userNumber * 25.4
+    if conversionType == '2':
+        userAnswer = userNumber / 25.4
+    return userAnswer
 
-#Conditional statement that determines 1 or 2
-if userConversionInput == '1':
-    # Convert from in to mm (userNumber * 25.4) (1 * 25.4) = 25.4 mm
-    print ('in to mm')
-    userAnswer = userNumber * 25.4
-if userConversionInput == '2':
-    # Convert from mm to in (userNumber/ 25.4 ) 1/25.4 = 0.394
-    print ('mm to in')
-    userAnswer = userNumber/25.4
+calcValue = calculate(userNumber, userConversionInput)
+
 
 # Print out the answer to user
-print('The answer is:', userAnswer)
+print('The answer is:', calcValue)
